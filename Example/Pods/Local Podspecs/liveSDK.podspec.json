@@ -1,0 +1,107 @@
+{
+  "name": "liveSDK",
+  "version": "0.1.2",
+  "summary": "A short description of liveSDK.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/暮雪/liveSDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "暮雪": "zhaotongyue1@163.com"
+  },
+  "source": {
+    "git": "https://github.com/暮雪/liveSDK.git",
+    "tag": "0.1.2"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source_files": "liveSDK/Classes/**/*",
+  "static_framework": true,
+  "libraries": [
+    "sqlite3.0",
+    "c",
+    "sqlite3",
+    "c++",
+    "iconv",
+    "z",
+    "resolv"
+  ],
+  "frameworks": [
+    "UIKit",
+    "MapKit",
+    "AudioToolbox",
+    "OpenAL",
+    "Metal",
+    "Foundation",
+    "MediaPlayer",
+    "SystemConfiguration",
+    "CoreTelephony",
+    "VideoToolbox",
+    "CoreMedia",
+    "CoreGraphics",
+    "AVFoundation",
+    "Accelerate",
+    "Security",
+    "AssetsLibrary",
+    "ReplayKit"
+  ],
+  "dependencies": {
+    "IQKeyboardManager": [
+
+    ],
+    "Bugly": [
+
+    ],
+    "RxSwift": [
+
+    ],
+    "RxCocoa": [
+
+    ],
+    "SnapKit": [
+
+    ],
+    "Alamofire": [
+
+    ],
+    "Toast-Swift": [
+
+    ],
+    "Material": [
+
+    ],
+    "SDWebImage": [
+      "~> 5.5.2"
+    ],
+    "Masonry": [
+
+    ],
+    "MJExtension": [
+
+    ],
+    "MJRefresh": [
+
+    ],
+    "AFNetworking": [
+      "~> 3.1.0"
+    ],
+    "BlocksKit": [
+      "~> 2.2.5"
+    ],
+    "CWStatusBarNotification": [
+      "~> 2.3.5"
+    ],
+    "YYCache": [
+      "~> 1.0.4"
+    ],
+    "JXCategoryView": [
+      "~> 1.5.7"
+    ],
+    "MBProgressHUD": [
+      "~> 1.2.0"
+    ]
+  }
+}

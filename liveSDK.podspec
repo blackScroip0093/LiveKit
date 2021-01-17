@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'liveSDK'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'A short description of liveSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -31,12 +31,36 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'liveSDK/Classes/**/*'
-  
+  s.static_framework = true
+#  s.resources = "liveSDK/*.png"
   # s.resource_bundles = {
   #   'liveSDK' => ['liveSDK/Assets/*.png']
   # }
+ 
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+#   s.public_header_files = '/Classes/RxWebViewController/RxWebViewController.h'
+#  s.prefix_header_contents = '#import "RxWebViewController.h"','#import "RxWebViewNavigationViewController.h"'
+   s.libraries  = 'sqlite3.0','c','sqlite3','c++','iconv','z','resolv'
+   s.frameworks = 'UIKit', 'MapKit','AudioToolbox','OpenAL','Metal','Foundation','MediaPlayer','SystemConfiguration','CoreTelephony','VideoToolbox','CoreMedia','CoreGraphics','AVFoundation','Accelerate','Security','AssetsLibrary','ReplayKit'
+   # AudioEffectSettingKit
+   s.dependency 'IQKeyboardManager'
+   s.dependency 'Bugly'
+   s.dependency 'RxSwift'
+   s.dependency 'RxCocoa'
+   s.dependency 'SnapKit'
+   s.dependency 'Alamofire'
+   s.dependency 'Toast-Swift'
+   s.dependency 'Material'
+   s.dependency 'SDWebImage', '~> 5.5.2'
+   s.dependency 'Masonry'
+   s.dependency 'MJExtension'
+   s.dependency 'MJRefresh'
+   s.dependency 'AFNetworking', '~> 3.1.0'
+   s.dependency 'BlocksKit', '~> 2.2.5'
+   s.dependency 'CWStatusBarNotification', '~> 2.3.5'
+   s.dependency 'YYCache', '~> 1.0.4'
+   s.dependency 'JXCategoryView', '~> 1.5.7'
+   s.dependency 'MBProgressHUD', '~> 1.2.0'
+#   s.dependency 'TEduBoard_iOS'
+   s.dependency 'CWStatusBarNotification', '~> 2.3.5'
 end

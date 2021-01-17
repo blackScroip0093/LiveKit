@@ -1,0 +1,6 @@
+framework module liveSDK {
+  umbrella header "liveSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
