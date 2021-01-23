@@ -15,11 +15,15 @@
     "git": "https://github.com/暮雪/liveSDK.git",
     "tag": "0.1.2"
   },
+  "swift_versions": "4.2",
   "platforms": {
     "ios": "9.0"
   },
   "source_files": "liveSDK/Classes/**/*",
   "static_framework": true,
+  "pod_target_xcconfig": {
+    "VALID_ARCHS": "x86_64 armv7 armv7s arm64"
+  },
   "libraries": [
     "sqlite3.0",
     "c",
@@ -48,6 +52,7 @@
     "AssetsLibrary",
     "ReplayKit"
   ],
+  "vendored_frameworks": "liveSDK/Classes/ZMCreditSDK.framework",
   "dependencies": {
     "IQKeyboardManager": [
 
@@ -102,6 +107,16 @@
     ],
     "MBProgressHUD": [
       "~> 1.2.0"
+    ],
+    "TXIMSDK_iOS": [
+
+    ],
+    "TEduBoard_iOS": [
+
+    ],
+    "NVActivityIndicatorView": [
+
     ]
-  }
+  },
+  "swift_version": "4.2"
 }

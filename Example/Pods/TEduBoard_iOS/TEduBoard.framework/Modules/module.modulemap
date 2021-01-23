@@ -1,0 +1,6 @@
+framework module TEduBoard {
+  umbrella header "TEduBoard.h"
+
+  export *
+  module * { export * }
+}

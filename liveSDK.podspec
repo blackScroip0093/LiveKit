@@ -27,7 +27,7 @@ TODO: Add long description of the pod here.
   s.author           = { '暮雪' => 'zhaotongyue1@163.com' }
   s.source           = { :git => 'https://github.com/暮雪/liveSDK.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
-
+  s.swift_version = '4.2'
   s.ios.deployment_target = '9.0'
 
   s.source_files = 'liveSDK/Classes/**/*'
@@ -40,8 +40,11 @@ TODO: Add long description of the pod here.
 
 #   s.public_header_files = '/Classes/RxWebViewController/RxWebViewController.h'
 #  s.prefix_header_contents = '#import "RxWebViewController.h"','#import "RxWebViewNavigationViewController.h"'
+   s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 armv7s arm64' }
    s.libraries  = 'sqlite3.0','c','sqlite3','c++','iconv','z','resolv'
    s.frameworks = 'UIKit', 'MapKit','AudioToolbox','OpenAL','Metal','Foundation','MediaPlayer','SystemConfiguration','CoreTelephony','VideoToolbox','CoreMedia','CoreGraphics','AVFoundation','Accelerate','Security','AssetsLibrary','ReplayKit'
+   s.vendored_frameworks =
+    'liveSDK/Classes/ZMCreditSDK.framework'
    # AudioEffectSettingKit
    s.dependency 'IQKeyboardManager'
    s.dependency 'Bugly'
@@ -61,6 +64,8 @@ TODO: Add long description of the pod here.
    s.dependency 'YYCache', '~> 1.0.4'
    s.dependency 'JXCategoryView', '~> 1.5.7'
    s.dependency 'MBProgressHUD', '~> 1.2.0'
-#   s.dependency 'TEduBoard_iOS'
+   s.dependency 'TXIMSDK_iOS'
+   s.dependency 'TEduBoard_iOS'
    s.dependency 'CWStatusBarNotification', '~> 2.3.5'
+   s.dependency 'NVActivityIndicatorView'
 end
