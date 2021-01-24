@@ -515,7 +515,7 @@ TRTCLiveRoomDelegate,TEduBoardDelegate,JXCategoryListContainerViewDelegate,JXCat
     
     [self getData];
     [super viewDidLoad];
-    [self setupToast];
+//    [self setupToast];
     //(1)白板
     NSString *userID = [[ProfileManager shared] curUserID];
     NSString *userSig = [[ProfileManager shared] curUserSig];
@@ -657,7 +657,7 @@ TRTCLiveRoomDelegate,TEduBoardDelegate,JXCategoryListContainerViewDelegate,JXCat
         [TCUtil toastTip:@"老师接受了您的连麦请求，开始连麦" parentView:self.view];
         //推流允许前后切换摄像头
         self->_btnCamera.hidden = NO;
-        [[AppUtils shared] alertUserTips:self];
+//        [[AppUtils shared] alertUserTips:self];
 //        [self hideWaitingNotice];
         
         [self showWaitingNotice:@"语言通话中"];
@@ -880,7 +880,7 @@ TRTCLiveRoomDelegate,TEduBoardDelegate,JXCategoryListContainerViewDelegate,JXCat
             if (self == nil) {
                 return ;
             }
-            [self makeToastWithMessage:error.length > 0 ? error : @"进入房间失败"];
+//            [self makeToastWithMessage:error.length > 0 ? error : @"进入房间失败"];
             dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
                 //退房
                 [self closeVCWithRefresh:YES popViewController:YES];

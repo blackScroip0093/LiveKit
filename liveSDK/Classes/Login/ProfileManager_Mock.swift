@@ -21,13 +21,13 @@ let loginBaseUrl = "https://xxx.com/release/"
     var data: LoginResultModel? = nil
 }
 
-@objc class LoginResultModel: NSObject, Codable {
-    @objc var token: String
-    @objc var phone: String
-    @objc var name: String
-    @objc var avatar: String
-    @objc var userId: String
-    @objc var userSig: String = ""
+@objc public class LoginResultModel: NSObject, Codable {
+    @objc public var token: String
+    @objc public var phone: String
+    @objc public var name: String
+    @objc public var avatar: String
+    @objc public var userId: String
+    @objc public var userSig: String = ""
     
     public init(userID: String) {
         userId = userID
@@ -110,16 +110,17 @@ let loginBaseUrl = "https://xxx.com/release/"
 
 @objc public class ProfileManager: NSObject {
     @objc public static let shared = ProfileManager()
-    private override init() {}
-    @objc var roomID :String =  ""
-    @objc var roomPassWord :String =  ""
-    @objc var loginUserModel: LoginResultModel? = nil
-    @objc var roomNickName :String =  ""
-    @objc var teacherId :String =  ""
+    @objc public var roomID :String =  ""
+    @objc public var roomPassWord :String =  ""
+    @objc public var loginUserModel: LoginResultModel? = nil
+    @objc public var roomNickName :String =  ""
+    @objc public var teacherId :String =  ""
     var phone = BehaviorRelay<String>(value: "")
     var code = BehaviorRelay<String>(value: "")
     var sessionId: String = ""
-    @objc var curUserModel: LoginResultModel? = nil
+    @objc public var curUserModel: LoginResultModel? = nil
+    private override init() {}
+    
     
     /// 自动登录
     /// - Parameters:
@@ -323,7 +324,7 @@ let loginBaseUrl = "https://xxx.com/release/"
         })
     }
     
-    @objc func curUserID() -> String? {
+    @objc public func curUserID() -> String? {
         guard let userID = curUserModel?.userId else {
             return nil
         }
@@ -337,5 +338,8 @@ let loginBaseUrl = "https://xxx.com/release/"
     
     @objc public func curUserSig() -> String {
            return curUserModel?.userSig ?? ""
+    }
+    @objc public func getRoomID() -> String {
+           return roomID ?? ""
     }
 }

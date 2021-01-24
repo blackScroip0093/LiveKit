@@ -81,7 +81,7 @@ extension LoginViewController {
                                                     let userID = ProfileManager.shared.curUserID()
                                                     let userSig = ProfileManager.shared.curUserSig()
                                                     TRTCCalling.shareInstance().imBusinessID = 1213214
-                                                    TRTCCalling.shareInstance().deviceToken = AppUtils.shared.appDelegate.deviceToken ?? Data()
+                                                    TRTCCalling.shareInstance().deviceToken =  Data()
                                                     ProfileManager.shared.IMLogin(userSig: userSig, success: {
                                                         TRTCCalling.shareInstance().login(sdkAppID: UInt32(SDKAPPID), user: userID ?? "", userSig:
                                                             userSig, success: {

@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'liveSDK'
-  s.version          = '0.1.2'
+  s.version          = '0.1.3'
   s.summary          = 'A short description of liveSDK.'
 
 # This description is used to generate tags and improve search results.
@@ -42,9 +42,9 @@ TODO: Add long description of the pod here.
 #  s.prefix_header_contents = '#import "RxWebViewController.h"','#import "RxWebViewNavigationViewController.h"'
    s.pod_target_xcconfig = { 'VALID_ARCHS' => 'x86_64 armv7 armv7s arm64' }
    s.libraries  = 'sqlite3.0','c','sqlite3','c++','iconv','z','resolv'
-   s.frameworks = 'UIKit', 'MapKit','AudioToolbox','OpenAL','Metal','Foundation','MediaPlayer','SystemConfiguration','CoreTelephony','VideoToolbox','CoreMedia','CoreGraphics','AVFoundation','Accelerate','Security','AssetsLibrary','ReplayKit'
+   s.frameworks = 'UIKit', 'MapKit','AudioToolbox','OpenAL','Metal','Foundation','MediaPlayer','SystemConfiguration','CoreTelephony','VideoToolbox','CoreMedia','CoreGraphics','AVFoundation','Accelerate','Security','AssetsLibrary','ReplayKit','TXLiteAVSDK_TRTC'
    s.vendored_frameworks =
-    'liveSDK/Classes/ZMCreditSDK.framework'
+    'liveSDK/Classes/TXLiteAVSDK_TRTC.framework'
    # AudioEffectSettingKit
    s.dependency 'IQKeyboardManager'
    s.dependency 'Bugly'
@@ -66,6 +66,7 @@ TODO: Add long description of the pod here.
    s.dependency 'MBProgressHUD', '~> 1.2.0'
    s.dependency 'TXIMSDK_iOS'
    s.dependency 'TEduBoard_iOS'
+#   s.dependency 'TIWLogger_iOS','~> 1.0.1.21'
    s.dependency 'CWStatusBarNotification', '~> 2.3.5'
    s.dependency 'NVActivityIndicatorView'
 end

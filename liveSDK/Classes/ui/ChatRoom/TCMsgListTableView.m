@@ -49,6 +49,7 @@
     }else{
         _msgleastArray = [[NSMutableArray alloc]init];
         for (TCMsgModel *msgModel in _msgallArray) {
+            [[ProfileManager shared] getRoomID];
             if (msgModel.userId == [[[ProfileManager shared] loginUserModel] userId]) {
                 [_msgleastArray addObject:msgModel];
             }

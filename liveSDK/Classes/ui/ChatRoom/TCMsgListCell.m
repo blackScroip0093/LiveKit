@@ -75,6 +75,7 @@ static NSInteger           _index = 0;
 
     _msgBkView.frame = _msgView.frame;
     _photoImageView.image =[UIImage imageNamed:@"学员"];
+    
     NSLog(@"%@",[[ProfileManager shared]curUserID]);
     
     if ([_msgModel.userId isEqualToString:[[[ProfileManager shared] loginUserModel] userId]] && self.isBig == NO) {
