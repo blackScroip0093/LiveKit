@@ -133,7 +133,7 @@
 
 - (void)setLiveRoom:(TRTCLiveRoom *)liveRoom {
     _liveRoom = liveRoom;
-    _vPKPanel.liveRoom = _liveRoom;
+//    _vPKPanel.liveRoom = _liveRoom;
     [_vMusicPanel setAudioEffectManager:[liveRoom getAudioEffectManager]];
 }
 
@@ -298,27 +298,27 @@
     [self addSubview: _vBeauty];
     
     //pK
-    _vPKPanel = [[AnchorPKPanel alloc] init];
-    _vPKPanel.backgroundColor = [UIColor clearColor];
-    _vPKPanel.hidden = YES;
-    __weak __typeof(self) weakSelf = self;
-    [_vPKPanel setPkWithRoom:^(TRTCLiveRoomInfo* room) {
-        if (weakSelf.delegate) {
-            [weakSelf.delegate pkWithRoom:room];
-        }
-    }];
-    [_vPKPanel setShouldHidden:^{
-        __strong __typeof(weakSelf) self = weakSelf;
-        [self addGestureRecognizer:self->_tap];
-    }];
+//    _vPKPanel = [[AnchorPKPanel alloc] init];
+//    _vPKPanel.backgroundColor = [UIColor clearColor];
+//    _vPKPanel.hidden = YES;
+//    __weak __typeof(self) weakSelf = self;
+//    [_vPKPanel setPkWithRoom:^(TRTCLiveRoomInfo* room) {
+//        if (weakSelf.delegate) {
+//            [weakSelf.delegate pkWithRoom:room];
+//        }
+//    }];
+//    [_vPKPanel setShouldHidden:^{
+//        __strong __typeof(weakSelf) self = weakSelf;
+//        [self addGestureRecognizer:self->_tap];
+//    }];
     
     //***
     //pK layout
-    [self addSubview:_vPKPanel];
-    [_vPKPanel sizeWith:CGSizeMake(self.width, 348 + bottomOffset)];
-    [_vPKPanel alignParentTopWithMargin:self.height-_vPKPanel.height];
-    [_vPKPanel alignParentLeftWithMargin:0];
-    
+//    [self addSubview:_vPKPanel];
+//    [_vPKPanel sizeWith:CGSizeMake(self.width, 348 + bottomOffset)];
+//    [_vPKPanel alignParentTopWithMargin:self.height-_vPKPanel.height];
+//    [_vPKPanel alignParentLeftWithMargin:0];
+//
     //********************
     // 音乐
     _vMusicPanel = [[AudioEffectSettingView alloc] initWithType:AudioEffectSettingViewCustom];
@@ -932,10 +932,10 @@
         // 这里的逻辑用来判断是否操作了美颜面板，暂时移除
         [self removeGestureRecognizer:_tap];
     }
-    
-    if (_vPKPanel.hidden == NO && CGRectContainsPoint(_vPKPanel.frame, point)) {
-        [self removeGestureRecognizer:_tap];
-    }
+//
+//    if (_vPKPanel.hidden == NO && CGRectContainsPoint(_vPKPanel.frame, point)) {
+//        [self removeGestureRecognizer:_tap];
+//    }
     
     return YES;
 }
@@ -1124,11 +1124,11 @@
         [self clickScreen:_tap];
     }
     
-    if (_vPKPanel.isHidden == NO) {
-        _vPKPanel.hidden = YES;
-        _closeBtn.hidden = NO;
-        [self addGestureRecognizer:_tap];
-    }
+//    if (_vPKPanel.isHidden == NO) {
+//        _vPKPanel.hidden = YES;
+//        _closeBtn.hidden = NO;
+//        [self addGestureRecognizer:_tap];
+//    }
     
     if (!_vMusicPanel.isHidden && !_isTouchMusicPanel) {
         [_vMusicPanel hide];

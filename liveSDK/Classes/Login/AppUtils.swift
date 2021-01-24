@@ -36,16 +36,16 @@ class AppUtils: NSObject {
 
     //MARK: - UI
     
-    @objc func showMainController() {
+    @objc public func showMainController() {
         
 //        appDelegate.showPortalConroller()
     }
     
-    @objc func showLoginController() {
+    @objc public func showLoginController() {
 //        appDelegate.showLoginController()
     }
     
-    @objc func alertUserTips(_ vc: UIViewController) {
+    @objc public func alertUserTips(_ vc: UIViewController) {
         // 提醒用户不要用Demo App来做违法的事情
         // 外发代码不需要提示
     }
